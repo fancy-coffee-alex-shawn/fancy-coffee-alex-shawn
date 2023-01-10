@@ -1,7 +1,7 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = '<div class="coffee">';
+    let html = '<div class="coffees">';
     // html += '<td>' + coffee.id + '</td>';
     html += '<div><h1 class="inline">' + coffee.name +  `</h1>` ;
     html +=  `<p>` + coffee.roast  + '</p></div>';
@@ -30,6 +30,26 @@ function updateCoffees(e) {
     coffeeArray.innerHTML = renderCoffees(filteredCoffees);
 }
 
+
+function updateCoffeesNames(){
+    let x = document.getElementById(coffeeName).value;
+    document.getElementById(coffeeArray)
+}
+
+// function updateCoffeesNames(e) {
+//     e.preventDefault(); // don't submit the form, we just want to update the data
+//     let selectedName = nameSelection.value;
+//     let filteredCoffees = [];
+//     coffees.name.forEach(function(coffee) {
+//         for (let i = 0; i < coffee.length; i++) {
+//             if (coffee.charAt(i) === selectedName.charAt(i)) {
+//                 filteredCoffees.push(coffee);
+//             }
+//         }
+//     });
+//     coffeeArray.innerHTML = renderCoffees(filteredCoffees);
+// }
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -51,10 +71,12 @@ let coffees = [
 let coffeeArray = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
+let nameSelection = document.querySelector(`#coffee-name`)
 
 coffeeArray.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+nameSelection.addEventListener('keyup', updateCoffeesNames)
+roastSelection.addEventListener('change', updateCoffees);
 
 
 //<-------------------------------------------------------------------------------->

@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <h1>Coffee!</h1>
@@ -20,9 +18,8 @@
         </select>
     </form>
     <form>
-        <label for="submit">Coffee Name</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <input id="submit" for="fname" type="submit">
+        <label for="coffeeName">Coffee Name</label><br>
+        <input type="text" onkeyup="updateCoffeesNames()" id="coffeeName">
     </form>
     <div id="coffees"></div>
     <script src="main.js"></script>
