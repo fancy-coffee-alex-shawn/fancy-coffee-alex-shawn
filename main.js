@@ -30,10 +30,29 @@ function updateCoffees(e) {
     coffeeArray.innerHTML = renderCoffees(filteredCoffees);
 }
 
+// Alexs experiment
+// function updateCoffeesNames(){
+//     let x = document.getElementById("coffeeName").value;
+//     let filteredCoffeeNames = [];
+//     coffees.forEach(function(coffee) {
+//         for (let i = 0; i < coffee.length; i++) {
+//             if (coffee.charAt(i) === x.charAt(i)){
+//                 filteredCoffeeNames.push(coffee);
+//             }
+//         }
+//     });
+//     coffeeArray.innerHTML = renderCoffees(filteredCoffeeNames);
+// }
 
 function updateCoffeesNames(){
-    let x = document.getElementById(coffeeName).value;
-    document.getElementById(coffeeArray)
+    let x = document.getElementById("coffeeName").value.toLowerCase();
+    let filteredCoffeeNames = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toLowerCase().includes(x) === true){
+            filteredCoffeeNames.push(coffee);
+        }
+    });
+    coffeeArray.innerHTML = renderCoffees(filteredCoffeeNames);
 }
 
 // function updateCoffeesNames(e) {
