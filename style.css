@@ -7,3 +7,17 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.inline {
+    display: inline;
+}
+p{
+    display: inline;
+    padding-left: 1em;
+}
