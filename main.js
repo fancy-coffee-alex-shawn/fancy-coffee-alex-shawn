@@ -1,9 +1,9 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = '<div class="coffees">';
+    let html = '<div class="coffees border text-center mx-auto" style="width: 80%">';
     // html += '<td>' + coffee.id + '</td>';
-    html += '<div><h1 class="inline">' + coffee.name +  `</h1>` ;
+    html += '<div class="inline"><h1 class="inline">' + coffee.name +  `</h1>` ;
     html +=  `<p>` + coffee.roast  + '</p></div>';
     html += '</div>';
 

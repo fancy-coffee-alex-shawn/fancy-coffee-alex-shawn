@@ -11,7 +11,7 @@
     <div class="container-fluid  d-flex justify-content-between ">
         <div>
         <a class="navbar-brand  " href="#">
-            <img src="img/fancy-coffee-cion.png" alt= width="70" height="60" class="d-inline-block  m-0 p-0 ">
+            <img src="img/fancy-coffee-icon.png" alt= width="70" height="60" class="d-inline-block  m-0 p-0 ">
         </a>
         </div>
         <div> <p class="fs-1  p-1">Coffee</p></div>
@@ -33,29 +33,49 @@
     </div>
     </div>
 </nav>
-
-
-    <form>
-        <label for="roast-selection">Roast</label>
-        <br>
-        <select id="roast-selection" onchange="updateCoffees()">
-            <option value="all">all</option>
-            <option value="light">light</option>
-            <option value="medium">medium</option>
-            <option value="dark">dark</option>
-        </select>
-    </form>
-    <form>
-        <label for="coffeeName">Coffee Name</label><br>
-        <input type="text" onkeyup="updateCoffees()" id="coffeeName">
-    </form>
+<div class="d-flex justify-content-evenly">
+    <h3 class="inline">Search Coffee</h3>
+    <h3 class="inline">Create Coffee</h3>
+</div>
+<div class="d-flex justify-content-evenly align-items center">
+    <div>
+        <form class="m-3 text-center">
+            <label class="" for="roast-selection">Roast Type</label>
+            <br>
+            <select class="text-center" style="width: 200px; height: 30px;" id="roast-selection" onchange="updateCoffees()">
+                <option class="" value="all">all</option>
+                <option value="light">light</option>
+                <option value="medium">medium</option>
+                <option value="dark">dark</option>
+            </select>
+        </form>
+        <form class="m-3 text-center">
+            <label for="coffeeName">Coffee Name</label><br>
+            <input style="width: 200px; height: 30px;" type="text" onkeyup="updateCoffees()" id="coffeeName">
+        </form>
+    </div>
+    <div>
+        <form class="m-3 text-center">
+            <label class="" for="roast-selection">Roast Type</label>
+            <br>
+            <select class="text-center" style="width: 200px; height: 30px;" id="roast-selection" onchange="updateCoffees()">
+                <option value="light">light</option>
+                <option value="medium">medium</option>
+                <option value="dark">dark</option>
+            </select>
+        </form>
+        <form class="m-3 text-center">
+            <label for="coffeeName">Coffee Name</label><br>
+            <input style="width: 200px; height: 30px;" type="text" onkeyup="updateCoffees()" id="coffeeName">
+        </form>
+    </div>
+</div>
 <!--    <div id="coffees" ></div>-->
 <!--    <script src="main.js"></script>-->
 
-<div class="card" style="width: 18rem;">
-    <img src="img/thenounproject.png" class="card-img-top"  >
+<div class="card d-flex mx-auto" style="width: 75%;">
     <div class="card-body">
-        <h5 class="card-title">Card title</h5>
+        <img class="align-self-center d-flex mx-auto" src="img/fancy-coffee-icon.png" style="width: 150px; height: 150px" class="card-img-top"  >
         <p class="card-text">  <div id="coffees" ></div><script src="main.js"></script></p>
     </div>
     <ul class="list-group list-group-flush">
@@ -63,7 +83,7 @@
         <li class="list-group-item">A second item</li>
         <li class="list-group-item">A third item</li>
     </ul>
-    <div class="card-body">
+    <div class="card-body ">
         <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a>
     </div>
