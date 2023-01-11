@@ -11,15 +11,15 @@
     <form>
         <label for="roast-selection">Roast</label>
         <br>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
+        <select id="roast-selection" onchange="updateCoffees()">
+            <option value="light">light</option>
+            <option value="medium">medium</option>
+            <option value="dark">dark</option>
         </select>
     </form>
     <form>
         <label for="coffeeName">Coffee Name</label><br>
-        <input type="text" onkeyup="updateCoffeesNames()" id="coffeeName">
+        <input type="text" onkeyup="updateCoffees()" id="coffeeName">
     </form>
     <div id="coffees"></div>
     <script src="main.js"></script>

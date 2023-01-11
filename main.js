@@ -19,55 +19,27 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    // e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
+    let selectedName = document.getElementById("coffeeName").value.toLowerCase();
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (selectedName == null && selectedRoast == null) {
+            filteredCoffees.push(coffee)
+        }
+        if (selectedName == null && coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        }
+        if (selectedRoast == null && coffee.name.toLowerCase().includes(selectedName) === true) {
+            filteredCoffees.push(coffee);
+        }
+        if (coffee.name.toLowerCase().includes(selectedName) === true && coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee)
         }
     });
     coffeeArray.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// Alexs experiment
-// function updateCoffeesNames(){
-//     let x = document.getElementById("coffeeName").value;
-//     let filteredCoffeeNames = [];
-//     coffees.forEach(function(coffee) {
-//         for (let i = 0; i < coffee.length; i++) {
-//             if (coffee.charAt(i) === x.charAt(i)){
-//                 filteredCoffeeNames.push(coffee);
-//             }
-//         }
-//     });
-//     coffeeArray.innerHTML = renderCoffees(filteredCoffeeNames);
-// }
-
-function updateCoffeesNames(){
-    let x = document.getElementById("coffeeName").value.toLowerCase();
-    let filteredCoffeeNames = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.name.toLowerCase().includes(x) === true){
-            filteredCoffeeNames.push(coffee);
-        }
-    });
-    coffeeArray.innerHTML = renderCoffees(filteredCoffeeNames);
-}
-
-// function updateCoffeesNames(e) {
-//     e.preventDefault(); // don't submit the form, we just want to update the data
-//     let selectedName = nameSelection.value;
-//     let filteredCoffees = [];
-//     coffees.name.forEach(function(coffee) {
-//         for (let i = 0; i < coffee.length; i++) {
-//             if (coffee.charAt(i) === selectedName.charAt(i)) {
-//                 filteredCoffees.push(coffee);
-//             }
-//         }
-//     });
-//     coffeeArray.innerHTML = renderCoffees(filteredCoffees);
-// }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
@@ -94,8 +66,6 @@ let nameSelection = document.querySelector(`#coffee-name`)
 
 coffeeArray.innerHTML = renderCoffees(coffees);
 
-nameSelection.addEventListener('keyup', updateCoffeesNames)
-roastSelection.addEventListener('change', updateCoffees);
 
 
 //<-------------------------------------------------------------------------------->
