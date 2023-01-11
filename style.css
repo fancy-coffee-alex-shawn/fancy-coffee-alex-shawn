@@ -12,6 +12,7 @@ td, th {
 html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 .inline {
@@ -24,6 +25,20 @@ p{
 img{
     height: 80px;
     width: 90px;
+}
+body{
+    background-image:url("img/blured_backround.jpg")  ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+
+
+
 }
 
 
