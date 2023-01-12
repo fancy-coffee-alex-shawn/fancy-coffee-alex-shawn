@@ -9,14 +9,14 @@
 </head>
 <body>
 
-<nav class="navbar navbar-light bg-light ">
+<nav class="navbar navbar-light " style="background-color: #BE9B7B;">
     <div class="container-fluid  d-flex justify-content-between ">
         <div>
         <a class="navbar-brand  " href="#">
             <img src="img/fancy-coffee-icon.png" alt= width="70" height="60" class="d-inline-block  m-0 p-0 ">
         </a>
         </div>
-        <div> <p class="fs-1  p-1">Coffee</p></div>
+        <div> <p class="fs-1  p-1">Fancy Coffee</p></div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,14 +36,14 @@
     </div>
 </nav>
 
-<div class="clid d-flex mt-5 pt-5 justify-content-center">
+<div class="clid d-flex pt-2 justify-content-center">
     <img class="lid"src="img/coffee%20lid.png">
 </div>
-<div class="card pb-5 d-flex mx-auto border border-dark border-3 rounded-bottom" style="width: 39em;">
-    <div class="card-body my-5 py-5">
+<div class="card d-flex mx-auto border border-dark border-3 rounded-5" style="width: 39em; height: 30em;">
+    <div class="card-body pt-2">
         <img class="align-self-center d-flex mx-auto" src="img/updated-logo.png" style="width: 150px; height: 150px" class="card-img-top">
         <div class="d-flex justify-content-center align-items-center">
-            <div class="me-3 mt-4">
+            <div class="me-3">
                 <h3 class="text-center bg-black rounded-circle p-4 text-white border border-white border-2">Search Coffee</h3>
                 <form class="m-3 text-center">
                     <label class="bg-black rounded-circle p-2 text-white border border-white border-2" for="roast-selection">Roast Type</label>
@@ -57,10 +57,10 @@
                 </form>
                 <form class="m-3 mb-5 text-center">
                     <label class="bg-black rounded-circle p-2 text-white border border-white border-2" for="coffeeName">Coffee Name</label><br>
-                    <input style="width: 200px; height: 30px;" type="text" onkeyup="updateCoffees()" id="coffeeName">
+                    <input class="text-center" style="width: 200px; height: 30px;" type="text" onkeyup="updateCoffees()" id="coffeeName">
                 </form>
             </div>
-            <div class="ms-3 mt-4">
+            <div class="ms-3">
                 <h3 class="text-center bg-black rounded-circle p-4 text-white border border-white border-2">Create Coffee</h3>
                 <form class="m-3 mb-5 text-center" id="createCoffeeForm">
                     <label class="bg-black rounded-circle p-2 text-white border border-white border-2" for="roast-selection">Roast Type</label>
@@ -72,13 +72,15 @@
                     </select>
                     <br>
                     <label class="mt-3 bg-black rounded-circle p-2 text-white border border-white border-2" for="createCoffeeName">Coffee Name</label><br>
-                    <input style="width: 200px; height: 30px;" type="text" id="createCoffeeName">
+                    <input class="text-center" style="width: 200px; height: 30px;" type="text" id="createCoffeeName">
                 </form>
             </div>
         </div>
     </div>
     </div>
 </div>
-<div class="d-flex flex-wrap justify-content-evenly border border-dark border-2 mt-1 mx-auto bg-light" style="width: 98%" id="coffees" ></div><script src="main.js"></script>
+<div class="coffee-container">
+    <div class="d-flex flex-wrap justify-content-evenly border border-dark border-2 mx-auto " style="width: 98%; background-color: #DFCCAF;" id="coffees" ></div><script src="main.js"></script>
+</div>
 </body>
 </html>
