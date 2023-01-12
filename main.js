@@ -1,7 +1,7 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = `<div class="coffees border text-center mx-auto" style="width: 80%; background-image: url(${coffee.img});">`;
+    let html = `<div class="coffees border text-center mx-auto" style="background-repeat: no-repeat;width: 80%; background-image: url(${coffee.img});">`;
     // html += '<td>' + coffee.id + '</td>';
     html += '<div class="inline"><h1 class="inline">' + coffee.name +  `</h1>` ;
     html +=  `<p>` + coffee.roast  + '</p></div>';
@@ -74,20 +74,20 @@ function createNewCoffee () {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
-    {id: 1, name: 'Light City', roast: 'light', img:'img.png'},
-    {id: 2, name: 'Half City', roast: 'light', img:'img.png'},
-    {id: 3, name: 'Cinnamon', roast: 'light', img:'img.png'},
-    {id: 4, name: 'City', roast: 'medium', img:'img.png'},
-    {id: 5, name: 'American', roast: 'medium', img:'img.png'},
-    {id: 6, name: 'Breakfast', roast: 'medium', img:'img.png'},
-    {id: 7, name: 'High', roast: 'dark', img:'img.png'},
-    {id: 8, name: 'Continental', roast: 'dark', img:'img.png'},
-    {id: 9, name: 'New Orleans', roast: 'dark', img:'img.png'},
-    {id: 10, name: 'European', roast: 'dark', img:'img.png'},
-    {id: 11, name: 'Espresso', roast: 'dark', img:'img.png'},
-    {id: 12, name: 'Viennese', roast: 'dark', img:'img.png'},
-    {id: 13, name: 'Italian', roast: 'dark', img:'img.png'},
-    {id: 14, name: 'French', roast: 'dark', img:'img.png'},
+    {id: 1, name: 'Light City', roast: 'light', img:'../img/light-beans.png'},
+    {id: 2, name: 'Half City', roast: 'light', img:'../img/light-beans.png'},
+    {id: 3, name: 'Cinnamon', roast: 'light', img:'../img/light-beans.png'},
+    {id: 4, name: 'City', roast: 'medium', img:'../img/medium-beans.png'},
+    {id: 5, name: 'American', roast: 'medium', img:'../img/medium-beans.png'},
+    {id: 6, name: 'Breakfast', roast: 'medium', img:'../img/medium-beans.png'},
+    {id: 7, name: 'High', roast: 'dark', img:'../img/dark-beans.png'},
+    {id: 8, name: 'Continental', roast: 'dark', img:'../img/dark-beans.png'},
+    {id: 9, name: 'New Orleans', roast: 'dark', img:'../img/dark-beans.png'},
+    {id: 10, name: 'European', roast: 'dark', img:'../img/dark-beans.png'},
+    {id: 11, name: 'Espresso', roast: 'dark', img:'../img/dark-beans.png'},
+    {id: 12, name: 'Viennese', roast: 'dark', img:'../img/dark-beans.png'},
+    {id: 13, name: 'Italian', roast: 'dark', img:'../img/dark-beans.png'},
+    {id: 14, name: 'French', roast: 'dark', img:'../img/dark-beans.png'},
 ];
 
 let coffeeArray = document.querySelector('#coffees');
