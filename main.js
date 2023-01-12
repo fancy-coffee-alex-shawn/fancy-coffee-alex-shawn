@@ -1,10 +1,10 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = `<div class="coffees" style="background-repeat: no-repeat; width: 250px; height: 250px; background-image: url(${coffee.img});">`;
+    let html = `<div class="coffees d-flex justify-content-center align-items-center" style="background-repeat: no-repeat; width: 250px; height: 250px; background-image: url(${coffee.img});">`;
     // html += '<td>' + coffee.id + '</td>';
-    html += '<div class="inline"><h1 class="inline">' + coffee.name +  `</h1>` ;
-    html +=  `<p>` + coffee.roast  + '</p></div>';
+    html += '<div class=""><h1 class="fs-2 text-white">' + coffee.name +  `</h1>` ;
+    html +=  `<p class="text-white">` + coffee.roast  + '</p></div>';
     html += '</div>';
 
     return html;
@@ -65,6 +65,15 @@ function createNewCoffee () {
         id: thisID,
         name: createdName,
         roast: createdRoast
+    }
+    if (createdRoast == 'light'){
+        coffeeObject.img = '../img/light-beans.png';
+    }
+    if (createdRoast == 'medium'){
+        coffeeObject.img = '../img/medium-beans.png'
+    }
+    if (createdRoast == 'dark'){
+        coffeeObject.img = '../img/dark-beans.png'
     }
     coffees.unshift(coffeeObject)
 }
