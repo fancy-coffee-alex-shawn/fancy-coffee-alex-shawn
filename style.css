@@ -40,5 +40,11 @@ body{
 
 
 }
+.lid{
+    width: 39em;
+    height: 9em;
+    margin: -32px;
+    z-index: 3;
+}
 
 
